@@ -12,7 +12,7 @@ class PackageRootTest extends TestCase
     {
         $this->assertEquals(
             '/User/Me/Code/dusk-standalone',
-            PackageRoot::for('dusk-standalone')->resolve('/User/Me/Code/dusk-standalone/src')
+            PackageRoot::forPackage('dusk-standalone')->resolve('/User/Me/Code/dusk-standalone/src')
         );
     }
 
@@ -21,7 +21,7 @@ class PackageRootTest extends TestCase
     {
         $this->assertEquals(
             '/User/Me/Code/app/vendor/konsulting/dusk-standalone',
-            PackageRoot::for ('dusk-standalone')->resolve('/User/Me/Code/app/vendor/konsulting/dusk-standalone/src')
+            PackageRoot::forPackage ('dusk-standalone')->resolve('/User/Me/Code/app/vendor/konsulting/dusk-standalone/src')
         );
     }
 }

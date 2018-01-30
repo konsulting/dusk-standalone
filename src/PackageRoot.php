@@ -11,7 +11,7 @@ class PackageRoot
         $this->package = $package;
     }
 
-    public static function for($package)
+    public static function forPackage($package)
     {
         return new static($package);
     }

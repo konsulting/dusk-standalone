@@ -95,7 +95,7 @@ abstract class TestCase extends PHPUnitTestCase
      */
     protected function browserTestsPath()
     {
-        return PackageRoot::for('dusk-standalone')->resolve(__DIR__).'/tests/Browser';
+        return PackageRoot::forPackage('dusk-standalone')->resolve(__DIR__).'/tests/Browser';
     }
 
     /**
