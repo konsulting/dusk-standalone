@@ -1,4 +1,4 @@
-#Dusk Standalone
+# Dusk Standalone
 
 A simple package to use [Laravel Dusk](https://github.com/laravel/dusk) with [PHPUnit](https://phpunit.de) outside of a [Laravel](https://laravel.com) application for browser testing.
 
@@ -8,13 +8,13 @@ Perhaps not everything will work as expected, since we're not integrated to Lara
 
 We also assist with another package, designed for using Laravel Dusk to test Laravel Packages, [Orchestra Testbench-Dusk](https://github.com/orchestral/testbench-dusk).
 
-##Installation
+## Installation
 
 We recommend using composer.
 
 `composer require konsulting/dusk-standalone`
 
-##Usage
+## Usage
 
 We tend to put our Browser tests in `tests/Browser`. Create a new base testcase that extends the `Konsulting\DuskStandalone\TestCase`.
 
