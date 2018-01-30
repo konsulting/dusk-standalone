@@ -3,13 +3,13 @@
 namespace Konsulting\DuskStandalone;
 
 use Exception;
-use Konsulting\DuskStandalone\Concerns\CleanseAuthentication;
 use Laravel\Dusk\Browser;
 use Laravel\Dusk\Chrome\SupportsChrome;
 use Laravel\Dusk\Concerns\ProvidesBrowser;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 use Konsulting\DuskStandalone\Concerns\StartsChrome;
 use Konsulting\DuskStandalone\Exceptions\NotADirectory;
+use Konsulting\DuskStandalone\Concerns\CleanseAuthentication;
 use Konsulting\DuskStandalone\Exceptions\CannotCreateDirectory;
 
 abstract class TestCase extends BaseTestCase
@@ -19,7 +19,7 @@ abstract class TestCase extends BaseTestCase
         StartsChrome,
         CleanseAuthentication;
 
-    static $directoriesCreated = false;
+    public static $directoriesCreated = false;
 
     /**
      * Register the base URL with Dusk.
@@ -51,7 +51,7 @@ abstract class TestCase extends BaseTestCase
     }
 
     /**
-     * Create directories
+     * Create directories.
      *
      * @param $path
      * @param $directories
@@ -69,11 +69,11 @@ abstract class TestCase extends BaseTestCase
             throw new NotADirectory($path);
         }
 
-        foreach($directories as $dir) {
-            @mkdir($path . '/' . $dir);
-            if (! is_dir($path . '/' . $dir)) {
+        foreach ($directories as $dir) {
+            @mkdir($path.'/'.$dir);
+            if (! is_dir($path.'/'.$dir)) {
                 throw new CannotCreateDirectory("{$dir}' at '{$path}");
-            };
+            }
         }
     }
 
@@ -106,6 +106,6 @@ abstract class TestCase extends BaseTestCase
      */
     protected function user()
     {
-        throw new Exception("User resolver has not been set.");
+        throw new Exception('User resolver has not been set.');
     }
 }
