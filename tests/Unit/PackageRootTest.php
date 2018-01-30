@@ -20,8 +20,8 @@ class PackageRootTest extends TestCase
     public function it_returns_the_right_path_in_an_application()
     {
         $this->assertEquals(
-            '/User/Me/Code/app/vendor/konsulting/dusk-standalone',
-            PackageRoot::forPackage ('dusk-standalone')->resolve('/User/Me/Code/app/vendor/konsulting/dusk-standalone/src')
+            '/User/Me/Code/app',
+            PackageRoot::forPackage('dusk-standalone')->resolve('/User/Me/Code/app/vendor/konsulting/dusk-standalone/src')
         );
     }
 }
