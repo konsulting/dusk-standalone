@@ -7,8 +7,8 @@ use Laravel\Dusk\Browser;
 use Laravel\Dusk\Chrome\SupportsChrome;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use Konsulting\DuskStandalone\Concerns\StartsChrome;
-use Konsulting\DuskStandalone\Exceptions\NotADirectory;
 use Konsulting\DuskStandalone\Concerns\ProvidesBrowser;
+use Konsulting\DuskStandalone\Exceptions\NotADirectory;
 use Konsulting\DuskStandalone\Concerns\CleanseAuthentication;
 use Konsulting\DuskStandalone\Exceptions\CannotCreateDirectory;
 
