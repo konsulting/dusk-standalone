@@ -1,0 +1,25 @@
+{
+    "name": "konsulting/dusk-standalone",
+    "description": "Standalone dusk testing, ideal for legacy projects, or remote testing.",
+    "require": {
+        "phpunit/phpunit": "^6.5",
+        "laravel/dusk": "2.0.x-dev@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Keoghan Litchfield",
+            "email": "keoghan@klever.co.uk"
+        }
+    ],
+    "autoload" : {
+        "psr-4": {
+            "Konsulting\\DuskStandalone\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Konsulting\\DuskStandalone\\Tests\\": "tests/"
+        }
+    }
+}

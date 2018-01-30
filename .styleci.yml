@@ -1,0 +1,10 @@
+preset: laravel
+
+risky: false
+
+finder:
+  name:
+    - "*.php"
+
+  exclude:
+    - "tests"
