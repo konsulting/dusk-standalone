@@ -1,4 +1,4 @@
 /vendor
 /tests/Browser/console
 /tests/Browser/screenshots
-.composer.lock
+composer.lock
