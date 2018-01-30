@@ -8,6 +8,22 @@ Perhaps not everything will work as expected, since we're not integrated to Lara
 
 We also assist with another package, designed for using Laravel Dusk to test Laravel Packages, [Orchestra Testbench-Dusk](https://github.com/orchestral/testbench-dusk).
 
+[![Build Status](https://travis-ci.org/konsulting/dusk-standalone.svg?branch=master)](https://travis-ci.org/konsulting/dusk-standalone)
+[![Latest Stable Version](https://poser.pugx.org/konsulting/dusk-standalone/v/stable)](https://packagist.org/packages/konsulting/dusk-standalone)
+[![Total Downloads](https://poser.pugx.org/konsulting/dusk-standalone/downloads)](https://packagist.org/packages/konsulting/dusk-standalone)
+[![Latest Unstable Version](https://poser.pugx.org/konsulting/dusk-standalone/v/unstable)](https://packagist.org/packages/konsulting/dusk-standalone)
+[![License](https://poser.pugx.org/konsulting/dusk-standalone/license)](https://packagist.org/packages/konsulting/dusk-standalone)
+[![StyleCI](https://styleci.io/repos/119553457/shield?branch=master)](https://styleci.io/repos/119553457)
+
+## Version Compatibility
+
+The versioning for this package aligns with major releases of Dusk.
+
+ Dusk     | Dusk Standalone
+:---------|:----------
+ 1.x      | 1.x
+ 2.x      | 2.x
+
 ## Installation
 
 We recommend using composer.
