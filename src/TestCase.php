@@ -4,15 +4,15 @@ namespace Konsulting\DuskStandalone;
 
 use Exception;
 use Laravel\Dusk\Browser;
-use Laravel\Dusk\Chrome\SupportsChrome;
-use Laravel\Dusk\Concerns\ProvidesBrowser;
-use PHPUnit\Framework\TestCase as BaseTestCase;
+use Laravel\Dusk\SupportsChrome;
+use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use Konsulting\DuskStandalone\Concerns\StartsChrome;
 use Konsulting\DuskStandalone\Exceptions\NotADirectory;
+use Konsulting\DuskStandalone\Concerns\ProvidesBrowser;
 use Konsulting\DuskStandalone\Concerns\CleanseAuthentication;
 use Konsulting\DuskStandalone\Exceptions\CannotCreateDirectory;
 
-abstract class TestCase extends BaseTestCase
+abstract class TestCase extends PHPUnitTestCase
 {
     use ProvidesBrowser,
         SupportsChrome,

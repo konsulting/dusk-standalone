@@ -28,7 +28,6 @@ trait StartsChrome
     {
         $options = (new ChromeOptions)->addArguments([
             '--disable-gpu',
-            '--headless',
         ]);
 
         return RemoteWebDriver::create(
