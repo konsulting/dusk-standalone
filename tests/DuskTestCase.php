@@ -18,6 +18,6 @@ class DuskTestCase extends TestCase
 
     protected function user()
     {
-        parent::user();
+        return parent::user();
     }
 }

@@ -48,7 +48,7 @@ abstract class DuskTestCase extends TestCase
     // to set them up specifically for your application anyway.
     protected function user()
     {
-        parent::user();
+        return parent::user();
     }
 }
 ```
