@@ -24,6 +24,10 @@ class PackageRoot
             throw new \Exception('Unable to locate package directory in path.');
         }
 
+        if ($parts[$key - 2] === 'vendor') {
+            return implode(DIRECTORY_SEPARATOR, array_slice($parts, 0, $key - 2));
+        }
+
         return implode(DIRECTORY_SEPARATOR, array_slice($parts, 0, $key + 1));
     }
 }
