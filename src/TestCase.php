@@ -9,15 +9,13 @@ use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use Konsulting\DuskStandalone\Concerns\StartsChrome;
 use Konsulting\DuskStandalone\Concerns\ProvidesBrowser;
 use Konsulting\DuskStandalone\Exceptions\NotADirectory;
-use Konsulting\DuskStandalone\Concerns\CleanseAuthentication;
 use Konsulting\DuskStandalone\Exceptions\CannotCreateDirectory;
 
 abstract class TestCase extends PHPUnitTestCase
 {
     use ProvidesBrowser,
         SupportsChrome,
-        StartsChrome,
-        CleanseAuthentication;
+        StartsChrome;
 
     public static $directoriesCreated = false;
 
