@@ -2,10 +2,9 @@
     "name": "konsulting/dusk-standalone",
     "description": "Standalone dusk testing, ideal for legacy projects, or remote testing.",
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.1",
         "phpunit/phpunit": "^6.5",
-        "laravel/dusk": "^2.0.11",
-        "symfony/process": "^3.3",
+        "laravel/dusk": "^3.0",
         "facebook/webdriver": "^1.3"
     },
     "license": "MIT",
@@ -24,5 +23,6 @@
         "psr-4": {
             "Konsulting\\DuskStandalone\\Tests\\": "tests/"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
