@@ -59,9 +59,9 @@ abstract class DuskTestCase extends TestCase
         return parent::browserTestsPath();
     }
 
-    // Set the closure that returns a user - however... we have disabled the 
-    // Laravel Dusk authentication routes by default, since you will need
-    // to set them up specifically for your application anyway.
+    // Set the default user - however... this is only useful if you will be
+    // using the Dusk type login. It's worth reviewing the Laravel Dusk
+    // trait InteractsWithAuthentication to combine with your app.
     protected function user()
     {
         return parent::user();
@@ -94,6 +94,26 @@ class ExampleTest extends DuskTestCase
 Run your tests as part of your testsuite, or separate them out to run on their own (since browser tests can be slow).
 
 Dusk documentation can be found [here](https://laravel.com/docs/dusk)
+
+### Authentication
+
+If you are able to add Dusk Login routes to your application, and for those to be secure, you will be able to use the standard dusk `login`, `loginAs`, `logout` and other methods.
+
+If that is not possible, you can leverage the 'Macroable' nature of the Browser class to add custom methods at runtime.  Take care to not try to overwite an existing method on the Browser class.
+
+For example: 
+
+```php
+<?php
+    // In your testing bootstrap file.
+
+    \Laravel\Dusk\Browser::macro('customLoginAs', function ($user, $pass) {
+        $this->browse('login_url')
+            ->type('username', $user)
+            ->type('pasword', $pass)
+            ->press('Login');
+    });
+```
 
 ## Contributing
 

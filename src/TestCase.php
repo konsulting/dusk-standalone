@@ -9,15 +9,13 @@ use Laravel\Dusk\Concerns\ProvidesBrowser;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 use Konsulting\DuskStandalone\Concerns\StartsChrome;
 use Konsulting\DuskStandalone\Exceptions\NotADirectory;
-use Konsulting\DuskStandalone\Concerns\CleanseAuthentication;
 use Konsulting\DuskStandalone\Exceptions\CannotCreateDirectory;
 
 abstract class TestCase extends BaseTestCase
 {
     use ProvidesBrowser,
         SupportsChrome,
-        StartsChrome,
-        CleanseAuthentication;
+        StartsChrome;
 
     public static $directoriesCreated = false;
 
