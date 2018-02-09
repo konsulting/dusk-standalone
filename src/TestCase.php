@@ -4,6 +4,7 @@ namespace Konsulting\DuskStandalone;
 
 use Exception;
 use Laravel\Dusk\Browser;
+use Konsulting\ProjectRoot;
 use Laravel\Dusk\SupportsChrome;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use Konsulting\DuskStandalone\Concerns\StartsChrome;
@@ -23,6 +24,9 @@ abstract class TestCase extends PHPUnitTestCase
      * Register the base URL with Dusk.
      *
      * @return void
+     * @throws \Exception
+     * @throws \Konsulting\DuskStandalone\Exceptions\CannotCreateDirectory
+     * @throws \Konsulting\DuskStandalone\Exceptions\NotADirectory
      */
     protected function setUp()
     {
@@ -35,6 +39,9 @@ abstract class TestCase extends PHPUnitTestCase
      * Setup the browser environment.
      *
      * @return void
+     * @throws \Exception
+     * @throws \Konsulting\DuskStandalone\Exceptions\CannotCreateDirectory
+     * @throws \Konsulting\DuskStandalone\Exceptions\NotADirectory
      */
     protected function setUpTheBrowserEnvironment()
     {
@@ -79,6 +86,7 @@ abstract class TestCase extends PHPUnitTestCase
      * Determine the application's base URL.
      *
      * @var string
+     * @return string
      */
     protected function baseUrl()
     {
@@ -93,13 +101,13 @@ abstract class TestCase extends PHPUnitTestCase
      */
     protected function browserTestsPath()
     {
-        return PackageRoot::forPackage('dusk-standalone')->resolve(__DIR__).'/tests/Browser';
+        return ProjectRoot::forPackage('dusk-standalone')->resolve(__DIR__).'/tests/Browser';
     }
 
     /**
      * Get a callback that returns the default user to authenticate.
      *
-     * @return \Closure
+     * @return void
      * @throws \Exception
      */
     protected function user()
