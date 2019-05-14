@@ -6,7 +6,7 @@
         "phpunit/phpunit": "^6.5",
         "laravel/dusk": "^2.0.11",
         "konsulting/project-root": "~1.0",
-        "symfony/process": "^3.3",
+        "symfony/process": "^3.3|^3.4",
         "facebook/webdriver": "^1.3"
     },
     "license": "MIT",
