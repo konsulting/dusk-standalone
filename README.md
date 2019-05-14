@@ -23,6 +23,8 @@ The versioning for this package aligns with major releases of Dusk.
 :---------|:----------
  1.x      | 1.x
  2.x      | 2.x
+ 3.x      | 3.x
+ 4.x      | 4.x
 
 ## Installation
 
@@ -114,6 +116,12 @@ For example:
             ->press('Login');
     });
 ```
+
+## Chrome Version
+
+If you receive an error containing information about the Chrome version (e.g. Chrome version must be between 70 and 73)
+
+Please run `vendor/bin/dusk-updater update`
 
 ## Contributing
 
