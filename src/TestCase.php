@@ -28,7 +28,7 @@ abstract class TestCase extends BaseTestCase
      * @throws \Konsulting\DuskStandalone\Exceptions\CannotCreateDirectory
      * @throws \Konsulting\DuskStandalone\Exceptions\NotADirectory
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
