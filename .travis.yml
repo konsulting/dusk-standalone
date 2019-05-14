@@ -20,7 +20,7 @@ before_script:
   - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction; fi
   - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable; fi
   - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
-  - ./vendor/bin/dusk-updater update 73
+  - ./vendor/bin/dusk-updater update
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 matrix:
