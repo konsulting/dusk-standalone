@@ -8,6 +8,9 @@ php:
   - 7.1
   - 7.2
 
+addons:
+  chrome: stable
+
 env:
   global:
     - setup=basic
@@ -17,10 +20,8 @@ before_script:
   - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction; fi
   - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable; fi
   - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
-  - ./vendor/bin/dusk-updater update 73
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - ./vendor/laravel/dusk/bin/chromedriver-linux &
+  - ./vendor/bin/dusk-updater update
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 matrix:
   include:
