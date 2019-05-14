@@ -25,6 +25,7 @@ The versioning for this package aligns with major releases of Dusk.
  2.x      | 2.x
  3.x      | 3.x
  4.x      | 4.x
+ 5.x      | 5.x
 
 ## Installation
 
