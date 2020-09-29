@@ -26,6 +26,7 @@ The versioning for this package aligns with major releases of Dusk.
  3.x      | 3.x
  4.x      | 4.x
  5.x      | 5.x
+ 6.x      | 6.x
 
 ## Installation
 
@@ -123,6 +124,8 @@ For example:
 If you receive an error containing information about the Chrome version (e.g. Chrome version must be between 70 and 73)
 
 Please run `vendor/bin/dusk-updater update`
+
+For further information please see [the Dusk Updater project](https://github.com/orchestral/dusk-updater)
 
 ## Contributing
 
