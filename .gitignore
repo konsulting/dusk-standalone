@@ -2,3 +2,4 @@
 /tests/Browser/console
 /tests/Browser/screenshots
 composer.lock
+.phpunit.result.cache

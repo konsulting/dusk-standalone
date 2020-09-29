@@ -3,9 +3,9 @@
     "description": "Standalone dusk testing, ideal for legacy projects, or remote testing.",
     "require": {
         "php": ">=7.1",
-        "phpunit/phpunit": "^7.5|^8.0",
-        "laravel/dusk": "^5.0",
-        "facebook/webdriver": "^1.3",
+        "phpunit/phpunit": "^7.5|^8.0|^9.0",
+        "laravel/dusk": "^6.0",
+        "php-webdriver/webdriver": "^1.8",
         "konsulting/project-root": "^1.1",
         "orchestra/dusk-updater": "^1.0"
     },
