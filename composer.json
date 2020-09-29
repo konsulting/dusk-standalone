@@ -7,7 +7,7 @@
         "laravel/dusk": "^6.0",
         "php-webdriver/webdriver": "^1.8",
         "konsulting/project-root": "^1.1",
-        "orchestra/dusk-updater": "^1.0"
+        "orchestra/dusk-updater": "^1.2"
     },
     "license": "MIT",
     "authors": [
