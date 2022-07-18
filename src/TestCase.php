@@ -25,6 +25,7 @@ abstract class TestCase extends BaseTestCase
      *
      * @return void
      * @throws \Exception
+     *
      * @throws \Konsulting\DuskStandalone\Exceptions\CannotCreateDirectory
      * @throws \Konsulting\DuskStandalone\Exceptions\NotADirectory
      */
@@ -39,6 +40,7 @@ abstract class TestCase extends BaseTestCase
      * Setup the browser environment.
      *
      * @return void
+     *
      * @throws \Exception
      * @throws \Konsulting\DuskStandalone\Exceptions\CannotCreateDirectory
      * @throws \Konsulting\DuskStandalone\Exceptions\NotADirectory
@@ -86,6 +88,7 @@ abstract class TestCase extends BaseTestCase
      * Determine the application's base URL.
      *
      * @var string
+     *
      * @return string
      */
     protected function baseUrl()
@@ -97,6 +100,7 @@ abstract class TestCase extends BaseTestCase
      * Determine the path for Browser Tests.
      *
      * @return string
+     *
      * @throws \Exception
      */
     protected function browserTestsPath()
@@ -108,6 +112,7 @@ abstract class TestCase extends BaseTestCase
      * Get a callback that returns the default user to authenticate.
      *
      * @return void
+     *
      * @throws \Exception
      */
     protected function user()
