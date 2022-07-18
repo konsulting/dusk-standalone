@@ -12,11 +12,14 @@ trait StartsChrome
      * Prepare for Dusk test execution.
      *
      * @beforeClass
+     *
      * @return void
      */
     public static function prepare()
     {
-        static::startChromeDriver();
+        if (! static::runningInSail()) {
+            static::startChromeDriver();
+        }
     }
 
     /**
