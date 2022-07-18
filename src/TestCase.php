@@ -114,4 +114,14 @@ abstract class TestCase extends BaseTestCase
     {
         throw new Exception('User resolver has not been set.');
     }
+
+    /**
+     * Determine if the tests are running within Laravel Sail.
+     *
+     * @return bool
+     */
+    protected static function runningInSail()
+    {
+        return isset($_ENV['LARAVEL_SAIL']) && $_ENV['LARAVEL_SAIL'] == '1';
+    }
 }

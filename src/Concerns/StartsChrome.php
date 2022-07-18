@@ -16,7 +16,9 @@ trait StartsChrome
      */
     public static function prepare()
     {
-        static::startChromeDriver();
+        if (! static::runningInSail()) {
+            static::startChromeDriver();
+        }
     }
 
     /**
