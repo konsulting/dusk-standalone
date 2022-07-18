@@ -24,8 +24,8 @@ abstract class TestCase extends BaseTestCase
      * Register the base URL with Dusk.
      *
      * @return void
-     * @throws \Exception
      *
+     * @throws \Exception
      * @throws \Konsulting\DuskStandalone\Exceptions\CannotCreateDirectory
      * @throws \Konsulting\DuskStandalone\Exceptions\NotADirectory
      */
