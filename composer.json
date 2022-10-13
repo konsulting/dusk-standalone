@@ -4,8 +4,7 @@
     "require": {
         "php": ">=7.2",
         "phpunit/phpunit": "^7.5|^8.0|^9.0",
-        "laravel/dusk": "^6.0",
-        "php-webdriver/webdriver": "^1.8",
+        "laravel/dusk": "^7.0",
         "konsulting/project-root": "^1.1",
         "orchestra/dusk-updater": "^1.2"
     },
